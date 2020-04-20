@@ -3,13 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "next export"
   },
   "dependencies": {
+    "firebase": "^7.14.0",
+    "framer-motion": "^1.10.3",
     "next": "9.3.4",
+    "node-sass": "^4.13.1",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
-  }
+    "react-dom": "16.13.1",
+    "react-firebase-file-uploader": "^2.4.3",
+    "sweetalert2": "^9.10.9"
+  },
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).",
+  "main": "index.js",
+  "devDependencies": {},
+  "author": "Roman Kusinsky",
+  "license": "MIT"
 }

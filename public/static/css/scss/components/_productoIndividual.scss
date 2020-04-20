@@ -1,0 +1,162 @@
+.productoindividual-container {
+    width: 90vw;
+    height: 80vh;
+    height: calc(var(--vh, 1vh) * 80);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+    @include media("<=tablet") {
+        height: 70vh;
+        height: calc(var(--vh, 1vh) * 70);
+    }
+
+    .productoindividual-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 60%;
+        height: 100%;
+        background: $verde;
+        z-index: 0;
+        border-radius: 10px;
+
+        @include media("<=tablet") {
+            width: 70%;
+        }
+    }
+
+
+    .productoindivudual-description {
+        flex: 1;
+        z-index: 4;
+        position: relative;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+
+        .titulo {
+            font-weight: $black;
+            font-size: 2.5rem;
+
+            @include media("<=tablet") {
+                font-size: 1rem;
+            }
+        }
+
+        .descripcion {
+            width: 300px;
+            margin: 0 auto;
+            text-align: center;
+            margin: 2rem 0rem;
+
+            @include media("<=tablet") {
+                font-size: .7rem;
+                margin: 1rem 0rem;
+                width: 150px;
+            }
+        }
+
+        .precio {
+            font-size: 1rem;
+            font-weight: $bold;
+            margin-bottom: 1rem;
+        }
+
+        .buton-background {
+            height: 60px;
+            width: 200px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            button {
+                position: relative;
+                z-index: 4;
+                padding: .8rem 1.2rem;
+                border: none;
+                background: none;
+                color: $negro;
+                font-weight: $bold;
+                cursor: pointer;
+                font-size: .8rem;
+                transition: all .6s ease;
+
+                @include media("<=tablet") {
+                    font-size: .6rem;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 10%;
+                left: 10%;
+                height: 80%;
+                width: 40%;
+                background: $blanco;
+                z-index: 1;
+                border-radius: 2px;
+                transition: all .6s ease;
+
+                @include media("<=tablet") {
+                    top: 25%;
+                    height: 50%;
+                    width: 25%;
+                    left: 22%;
+                }
+
+            }
+
+            &:hover {
+                button {
+                    transform: translateX(-8px);
+                }
+
+                &::after {
+                    left: 40%;
+
+                    @include media("<=tablet") {
+                        left: 45%;
+                    }
+
+                }
+            }
+        }
+
+    }
+
+    .productoindividual-imagen {
+        flex: 3;
+        z-index: 4;
+        position: relative;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 700px;
+        overflow: hidden;
+
+
+        img {
+            width: 100%;
+
+            @include media("<=tablet") {
+                max-height: 220px;
+                max-width: 220px;
+            }
+        }
+    }
+
+
+}

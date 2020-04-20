@@ -1,0 +1,114 @@
+.login-container {
+    width: 40vw;
+    margin: 0 auto;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include media("<=tablet") {
+        width: 90vw;
+    }
+
+    .login-inputs-container {
+        background-color: $blanco;
+        box-shadow: $shadow;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        height: 450px;
+        width: 100%;
+        border-radius: 15px;
+        padding: 2rem 3rem;
+
+
+        .admin-text {
+            flex: 3;
+
+            h4 {
+                font-size: 2rem;
+                font-weight: $black;
+                margin-bottom: .5rem;
+            }
+
+            p {
+                margin-bottom: .5rem;
+            }
+        }
+
+
+        form {
+            flex: 5;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 2rem;
+            width: 100%;
+
+            .placeholder-container {
+                position: relative;
+                margin: 0 auto;
+                width: 100%;
+
+                input {
+                    width: 100%;
+                    margin: 0 auto;
+                    border-radius: 5px;
+                    border: none;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding-left: .5rem;
+                    filter: brightness(110%);
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                .input:not(:placeholder-shown)+label,
+                .input:focus+label {
+                    top: -42%;
+                    left: 0%;
+                    transform: scale(1.3);
+                    opacity: 1;
+                }
+
+                .input-placeholder {
+                    position: absolute;
+                    top: 18%;
+                    left: 9%;
+                    color: $negro;
+                    transition: all .3s ease;
+                    font-size: .7rem;
+                    opacity: .7;
+
+                }
+            }
+
+            button {
+                width: 200px;
+                margin: 0 auto;
+                flex: 2;
+                padding: .5rem 1rem;
+                border-radius: 10px;
+                background-color: $amarillo;
+                border: none;
+                font-weight: $black;
+                cursor: pointer;
+                transition: all .6s ease;
+
+                &:hover {
+                    transform: translateY(-2px);
+                    filter: brightness(101%);
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+        }
+    }
+}

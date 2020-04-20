@@ -1,0 +1,58 @@
+$negro: #060606;
+$verde: #AEE4DC;
+$blanco: #fdfffc;
+$gris: #F7F7F7;
+$amarillo: #FFF074;
+$black: 900;
+$bold: 700;
+$medium: 500;
+$shadow: 0 0.8px 2.2px rgba(0, 0, 0, 0.032),
+0 2.7px 9.9px rgba(0, 0, 0, 0.048),
+0 12px 36px rgba(0, 0, 0, 0.08);
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    font-family: 'Raleway', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: $blanco;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body::-webkit-scrollbar {
+    width: 0.25rem;
+    height: 0;
+}
+
+body::-webkit-scrollbar-track {
+    background: $blanco;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: $verde;
+    border-radius: 10px;
+}
+
+::selection {
+    background: $verde;
+    color: $blanco;
+
+}
